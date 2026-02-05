@@ -1,0 +1,215 @@
+.payments-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+}
+
+.payments-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--section-gap);
+}
+
+.history-card,
+.students-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-header-modern {
+    padding: var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header-modern h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-main);
+}
+
+/* History Side */
+.table-container-mini {
+    overflow-x: auto;
+}
+
+.data-table-mini {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table-mini th {
+    text-align: left;
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.data-table-mini td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
+}
+
+/* Students Side */
+.students-quick-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.student-quick-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.student-quick-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(4px);
+}
+
+.student-info-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.student-name-mini {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-main);
+}
+
+.pay-btn-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+    background: #6366f1;
+    color: white;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pay-btn-mini:hover {
+    background: #4f46e5;
+    transform: scale(1.05);
+}
+
+.selected-student-info {
+    margin-bottom: 1.5rem;
+}
+
+.selected-student-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.student-name-text {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.card-search-wrapper {
+    padding: 0 var(--space-lg) var(--space-md);
+    position: relative;
+}
+
+.card-search-wrapper .search-icon {
+    position: absolute;
+    left: 2.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.card-search-wrapper input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-main);
+}
+
+/* Reusing some existing styles */
+.student-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.avatar-xs {
+    width: 24px;
+    height: 24px;
+    background: rgba(99, 102, 241, 0.2);
+    color: #818cf8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.amount-badge {
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    color: #10b981;
+}
+
+.status-pill-mini {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-pill-mini.paid {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.status-pill-mini.pending {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.status-pill-mini.failed {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+@media (max-width: 1024px) {
+    .payments-grid {
+        grid-template-columns: 1fr;
+    }
+}
