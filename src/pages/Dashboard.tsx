@@ -98,8 +98,7 @@ const Dashboard: FC = () => {
                     id: `p-${p.id}`,
                     type: 'payment',
                     title: 'Новый платеж',
-                    description: `Получена оплата ${p.amount.toLocaleString()}₽ от ${p.students?.[0]?.full_name
- || 'Студента'
+                    description: `Получена оплата ${p.amount.toLocaleString()}₽ 
                         }`,
                     date: new Date(p.date),
                     icon: FaMoneyBillWave,
